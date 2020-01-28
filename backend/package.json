@@ -3,7 +3,52 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/app.js",
+    "dev": "PORT=3000 tsc && nodemon dist/app.js",
+    "test": ""
+  },
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/request-promise": "^4.1.45",
+    "bcryptjs": "^2.4.3",
+    "cookie": "^0.4.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "nonce": "^1.0.4",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cookie": "^0.3.3",
+    "@types/express": "^4.17.2",
+    "@types/jest": "^25.1.0",
+    "@types/node": "^13.5.0",
+    "jest": "^25.1.0",
+    "ncu": "^0.2.1",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.0.0",
+    "ts-node": "^8.6.2"
+  },
+  "jest": {
+    "globalSetup": "./src/test/callSetup.js",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
