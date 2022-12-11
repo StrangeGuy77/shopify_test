@@ -15,7 +15,7 @@
     "cookie": "^0.4.0",
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "moment": "^2.24.0",
     "nonce": "^1.0.4",
     "querystring": "^0.2.0",
